@@ -16,3 +16,7 @@ yum install nginx
 firewall-cmd --permanent --zone=public --add-service=http
 firewall-cmd --permanent --zone=public --add-service=https
 firewall-cmd --reload
+
+# Install ProFTPD
+yum -y install proftpd
+
