@@ -1,0 +1,15 @@
+
+rt GALAXY_CONFIG_FILE='/media/Disk1/srv/galaxy/config/galaxy.ini'
+export GALAXY_VIRTUAL_ENV='/media/Disk1/srv/galaxy/venv'
+
+case $1 in
+    --daemon)
+        log="--log-file=/media/Disk1/srv/galaxy/log/paster.log"
+        ;;
+    *)
+        log=""
+        ;;
+esac
+
+/bin/sh /media/Disk1/srv/galaxy/server/run.sh $log "$@"
+
